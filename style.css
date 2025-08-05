@@ -65,6 +65,13 @@ p {
   cursor: pointer;
 }
 
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+
 /* Layout Containers */
 .container, .service-cards, .gallery, .brand-elements, .swatches {
   display: flex;
@@ -198,4 +205,5 @@ footer {
   p { font-size: 0.9rem; }
   section { padding: 40px 10px; }
 }
+
 
