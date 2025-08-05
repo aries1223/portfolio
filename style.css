@@ -1,4 +1,4 @@
-/* style.css */
+/* Base Styles */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -6,209 +6,18 @@ body {
   background-color: #fdfaf6;
 }
 
-.hero {
-  background: linear-gradient(to right, #d9cbbd, #f2e9e4);
-  padding: 100px 20px;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-}
-
-.hero h1 {
-  font-family: 'Allura', regular;
-  font-size: 4rem;
-  color: #3a3a3a;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-
-
-.btn {
-  background-color: #3a3a3a;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 900px;
   margin: auto;
+  border-bottom: 1px solid #e0dcd5;
 }
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.service-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #3a3a3a;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background-color: #eae7dc;
-  font-size: 0.9rem;
-}
-
-/* Add this to style.css */
-.portfolio {
-  padding: 60px 20px;
-  background-color: #fff;
-}
-
-.gallery {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery-item {
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-align: center;
-}
-
-.gallery-item img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.gallery-item p {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Add to style.css */
-.brand-board {
-  padding: 60px 20px;
-  background-color: #f2e9e4;
-}
-
-.brand-elements {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  text-align: center;
-}
-
-.swatches {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.swatch {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-}
-
-
-.gallery-item img {
-  transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-
-.contact {
-  padding: 60px 20px;
-  background-color: #fdfaf6;
-  text-align: center;
-}
-
-.contact h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-input, textarea {
-  padding: 15px;
-  border: 1px solid #d4af37;
-  border-radius: 8px;
-  background-color: #fff;
-  font-family: 'Montserrat', sans-serif;
-
-
-.hero {
-  background: linear-gradient(to right, #d9cbbd, #f2e9e4);
-}
-
-.about {
-  background-color: #fff;
-}
-
-.services {
-  background-color: #f2e9e4;
-}
-
-.portfolio {
-  background-color: #fff;
-}
-
-.brand-board {
-  background-color: #fdfaf6;
-}
-
-.contact {
-  background-color: #f2e9e4;
-}
-
 
 h2 {
   font-family: 'Playfair Display', serif;
@@ -226,44 +35,98 @@ p {
   color: #555;
 }
 
-
-section {
-  padding: 80px 20px;
-  border-bottom: 1px solid #e0dcd5;
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #d9cbbd, #f2e9e4);
+  padding: 100px 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
 }
 
-.container {
+.hero h1 {
+  font-family: 'Allura', cursive;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn, button {
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Layout Containers */
+.container, .service-cards, .gallery, .brand-elements, .swatches {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-
-@media (max-width: 1024px) {
-  h2 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  section {
-    padding: 60px 15px;
-  }
+/* Cards */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 0.95rem;
-  }
-  input, textarea {
+/* Gallery */
+.gallery-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.gallery-item img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Brand Board */
+.swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+/* Contact Form */
+.contact {
+  background-color: #f2e9e4;
+  text-align: center;
+}
+
+.contact form, form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, textarea {
   padding: 15px;
   border: 1px solid #d4af37;
   border-radius: 8px;
@@ -271,34 +134,50 @@ section {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #eae7dc;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.6rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
-  section {
-    padding: 40px 10px;
-  }
+/* Section Backgrounds */
+.about, .portfolio {
+  background-color: #fff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.services {
+  background-color: #f2e9e4;
 }
 
+.brand-board {
+  background-color: #fdfaf6;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  h2 { font-size: 2rem; }
+  p { font-size: 1rem; }
+  section { padding: 60px 15px; }
+}
 
 @media (max-width: 768px) {
+  .container, .service-cards, .gallery, .brand-elements {
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 { font-size: 1.8rem; }
+  p { font-size: 0.95rem; }
+  input, textarea { font-size: 1rem; }
   nav ul {
     flex-direction: column;
     align-items: center;
   }
 }
 
-
-
-
+@media (max-width: 480px) {
+  h2 { font-size: 1.6rem; }
+  p { font-size: 0.9rem; }
+  section { padding: 40px 10px; }
+}
