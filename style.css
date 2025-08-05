@@ -10,7 +10,7 @@ body {
   background: linear-gradient(to right, #d9cbbd, #f2e9e4);
   padding: 100px 20px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Allura', regular;
 }
 
 .hero h1 {
@@ -229,6 +229,7 @@ section {
   padding: 80px 20px;
   border-bottom: 1px solid #e0dcd5;
 }
+
 
 
 
