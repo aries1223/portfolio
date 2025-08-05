@@ -232,12 +232,72 @@ section {
   border-bottom: 1px solid #e0dcd5;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  section {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  input, textarea {
+  padding: 15px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 40px 10px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
-
-
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 
