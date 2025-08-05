@@ -1,19 +1,79 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aries | Virtual Assistant</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-  
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&family=Allura&display=swap" rel="stylesheet">
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #fdfaf6;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #3a3a3a;
+      font-weight: bold;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #3a3a3a;
+      margin: 4px 0;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fdfaf6;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
 </head>
+<body>
 
-  <body>
+  <!-- Navigation -->
+  <nav>
+    <h1 style="font-family: 'Allura', cursive;">Aries</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <h1>Aries Erika</h1>
@@ -22,14 +82,16 @@
     </div>
   </header>
 
-  <section class="about">
+  <!-- About Section -->
+  <section class="about" id="about">
     <h2>About Me</h2>
     <p>I help entrepreneurs and real estate professionals stay organized, efficient, and stress-free. With a passion for detail and a touch of elegance, I bring clarity to your business operations.</p>
   </section>
 
-  <section class="services">
+  <!-- Services Section -->
+  <section class="services" id="services">
     <h2>Services</h2>
-    <div class="service-cards">
+    <div class="service-cards container">
       <div class="card">
         <h3>Admin Support</h3>
         <p>Calendar management, email handling, and document organization.</p>
@@ -45,68 +107,60 @@
     </div>
   </section>
 
-
-<!-- Add this below the Services section in index.html -->
-<section class="portfolio">
-  <h2>Portfolio</h2>
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="https://i.etsystatic.com/48523338/r/il/4187de/5645612474/il_1080xN.5645612474_r27x.jpg" alt="Client Dashboard Design">
-      <p>Client Dashboard Design</p>
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.etsystatic.com/48523338/r/il/3a3f9e/5645612480/il_1080xN.5645612480_3k1y.jpg" alt="Social Media Planner">
-      <p>Social Media Planner</p>
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.etsystatic.com/48523338/r/il/1e3f9e/5645612482/il_1080xN.5645612482_3k1y.jpg" alt="Client Testimonial Page">
-      <p>Client Testimonial Page</p>
-    </div>
-  </div>
-</section>
-
-<section class="brand-board">
-  <h2>Brand Board</h2>
-  <div class="brand-elements">
-    <div>
-      <h3>Color Palette</h3>
-      <div class="swatches">
-        <div class="swatch" style="background:#d4af37;"></div>
-        <div class="swatch" style="background:#fdfaf6;"></div>
-        <div class="swatch" style="background:#3a3a3a;"></div>
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery container">
+      <div class="gallery-item">
+        <img src="https://i.etsystatic.com/48523338/r/il/4187de/5645612474/il_1080xN.5645612474_r27x.jpg" alt="Client Dashboard Design">
+        <p>Client Dashboard Design</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.etsystatic.com/48523338/r/il/3a3f9e/5645612480/il_1080xN.5645612480_3k1y.jpg" alt="Social Media Planner">
+        <p>Social Media Planner</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.etsystatic.com/48523338/r/il/1e3f9e/5645612482/il_1080xN.5645612482_3k1y.jpg" alt="Client Testimonial Page">
+        <p>Client Testimonial Page</p>
       </div>
     </div>
-    <div>
-      <h3>Typography</h3>
-      <p style="font-family:'Playfair Display', serif;">Playfair Display</p>
-      <p style="font-family:'Montserrat', sans-serif;">Montserrat</p>
+  </section>
+
+  <!-- Brand Board Section -->
+  <section class="brand-board">
+    <h2>Brand Board</h2>
+    <div class="brand-elements container">
+      <div>
+        <h3>Color Palette</h3>
+        <div class="swatches">
+          <div class="swatch" style="background:#d4af37;"></div>
+          <div class="swatch" style="background:#fdfaf6;"></div>
+          <div class="swatch" style="background:#3a3a3a;"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Typography</h3>
+        <p style="font-family:'Playfair Display', serif;">Playfair Display</p>
+        <p style="font-family:'Montserrat', sans-serif;">Montserrat</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xeozrgbo" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-<section class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/xeozrgbo" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-
+  <!-- Footer -->
   <footer>
     <p>© 2025 Aries Erika | Virtual Assistant</p>
   </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
