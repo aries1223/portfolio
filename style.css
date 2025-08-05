@@ -14,7 +14,7 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Allura', cursive;
+  font-family: 'Allura', regular;
   font-size: 4rem;
   color: #3a3a3a;
   margin-bottom: 0.5rem;
@@ -230,6 +230,7 @@ section {
   padding: 80px 20px;
   border-bottom: 1px solid #e0dcd5;
 }
+
 
 
 
